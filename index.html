@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>One Piece Landing Page</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Pirate-style font -->
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+  <script>
+    function toggleMenu() {
+      document.getElementById("mobile-menu").classList.toggle("hidden");
+    }
+  </script>
+  <style>
+    body {
+      font-family: 'Bangers', cursive;
+    }
+  </style>
+</head>
+<body class="bg-sky-100 text-gray-900">
+
+  <!-- Navbar -->
+  <nav class="bg-yellow-200 shadow-md sticky top-0 z-50 border-b-4 border-red-500">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      <div class="flex items-center gap-3">
+        <img src="onepiece.jpg" alt="Straw Hat" class="w-10 h-10">
+        <span class="text-2xl text-red-600">Straw Hat Crew</span>
+      </div>
+      <div class="hidden md:flex space-x-6 text-lg">
+        <a href="#" class="hover:text-red-600">Home</a>
+        <a href="#about" class="hover:text-red-600">About</a>
+        <a href="#contact" class="hover:text-red-600">Contact</a>
+      </div>
+      <button class="md:hidden text-2xl" onclick="toggleMenu()">☰</button>
+    </div>
+    <div id="mobile-menu" class="md:hidden hidden px-4 pb-4">
+      <a href="#" class="block py-2 hover:text-red-600">Home</a>
+      <a href="#about" class="block py-2 hover:text-red-600">About</a>
+      <a href="#contact" class="block py-2 hover:text-red-600">Contact</a>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+<header class="bg-gradient-to-r from-blue-400 to-sky-300 text-white text-center py-16 px-6">
+  <div class="max-w-5xl mx-auto flex flex-col-reverse md:flex-row items-center gap-8">
+    
+    <!-- Text Content -->
+    <div class="md:w-1/2">
+      <h1 class="text-4xl md:text-5xl mb-4 drop-shadow-md">Set Sail for the Grand Line!</h1>
+      <p class="text-xl mb-6">Join Luffy and the Straw Hat Pirates on an unforgettable journey.</p>
+      <a href="#contact" class="bg-yellow-300 text-red-700 border-2 border-red-500 py-2 px-6 rounded-full text-xl hover:bg-yellow-400 transition">Join the Crew</a>
+    </div>
+
+    <!-- Crew Image -->
+    <div class="md:w-1/2">
+      <img src="crew.jpg" alt="Straw Hat Crew" class="rounded-lg shadow-xl max-w-full">
+    </div>
+
+  </div>
+</header>
+
+
+  <!-- About Section -->
+  <section id="about" class="py-16 px-6 max-w-4xl mx-auto text-center">
+    <h2 class="text-4xl text-red-600 mb-4">About the Straw Hat Pirates</h2>
+    <p class="text-lg text-gray-700">
+      The Straw Hat crew is a band of misfits led by Monkey D. Luffy. With dreams of finding the legendary treasure One Piece, they travel across seas, fight Marines, battle Warlords, and uncover the secrets of the world!
+    </p>
+  </section>
+
+  <!-- Contact Section -->
+ <section id="contact" class="bg-yellow-100 py-16 px-6">
+    <div class="max-w-xl mx-auto text-center">
+      <h2 class="text-4xl text-red-600 mb-6">Send a Message to the Sunny!</h2>
+      <form class="space-y-4 text-left">
+        <input type="text" placeholder="Your Name" class="w-full px-4 py-2 border border-yellow-300 rounded" required />
+        <input type="email" placeholder="Your Email" class="w-full px-4 py-2 border border-yellow-300 rounded" required />
+        <textarea rows="4" placeholder="Your Message" class="w-full px-4 py-2 border border-yellow-300 rounded" required></textarea>
+        <button type="submit" class="w-full bg-red-500 text-white py-2 rounded hover:bg-red-600 transition">Send to the Crew</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center text-gray-600 py-6 border-t border-red-300 bg-white">
+    © 2025 Straw Hat Crew. Adventure Never Ends.
+  </footer>
+
+</body>
+</html>
